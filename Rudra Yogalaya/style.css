@@ -1,0 +1,443 @@
+header {
+    background-color: #ffffff; /* Crisp white strip background just like the screenshot */
+    display: flex;             /* Lines up elements side-by-side */
+    justify-content: space-between; /* Pushes the branding logo left, text menu right */
+    align-items: center;       /* Centers links vertically straight inline */
+    padding: 15px 50px;        /* Clean structural breathing room top/bottom and sides */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05); /* Adds that modern, premium separating line shadow */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Gives the whole site a crisp white canvas */
+    font-family: 'Segoe UI', Arial, sans-serif;
+        /* 1. Places your logo as a giant watermark behind the whole website */
+
+}
+
+
+.logo-img {
+    height: 70px;
+    border-radius: 50%;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    animation: slideUpFade 1s ease-out 1.5s forwards
+}
+.stat-card {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    
+}
+nav a {
+    text-decoration: none;
+    color: #333333;
+    margin-left: 25px;
+}
+
+.programs-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.programs-row h2 {
+    margin-left: 20px;
+}
+/* 1. Force the activity content card block to stretch wide and center nicely */
+.programs-card {
+    width: 85% !important;              /* 🚀 Makes the main container span beautifully across desktops */
+    max-width: 1000px !important;       /* Locks the box size so it stays clean on wide monitors */
+    margin: 40px auto !important;       /* Centers the entire card deck horizontally on the screen canvas */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.08); /* Premium floating soft drop shadow */
+    overflow: hidden !important;        /* Keeps your corners round and clips sliding borders */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Format the sliding camera window box to stretch to full desktop width */
+.card-gallery {
+    display: flex !important;
+    overflow-x: auto !important;
+    width: 100% !important;             /* Expands inline fully to stretch across your 1000px card walls */
+    height: 400px !important;           /* 🌟 INCREASED HEIGHT: Makes your student photos tall, big, and striking! */
+    scroll-behavior: smooth !important;
+    overflow: hidden !important;        /* Camera Shutter: Completely hides all other off-screen images */
+}
+
+/* 3. Style each individual slide asset photo to fill the large layout frame exactly */
+.gallery-img {
+    width: 100% !important;             /* Stretches fluidly to occupy the full card layer */
+    min-width: 100% !important;         /* 🚀 THE EXPANSION SHIELD: Forces exactly ONE huge image per view window */
+    height: 100% !important;            /* Fills up the 400px height space seamlessly */
+    flex-shrink: 0 !important;          /* Total blockade against the browser trying to squish pictures together */
+    object-fit: contain !important;
+}
+
+
+.programs-card h3, .programs-card p {
+    padding: 0px 20px;        /* Moves text inward away from the box edges */
+    text-align: left;         /* Makes text highly readable */
+}
+
+/* 🕋 CLEAN MODERN SQUARE FOOTER LAYOUT */
+footer {
+    background-color: #111111;  /* Rich, solid dark charcoal backdrop */
+    color: #ffffff;
+    padding: 60px 20px 40px 20px; /* Comfortable padding space inside the square box */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px;           /* Adds a clean, uniform separation gap below your photos */
+    position: relative;
+}
+
+/* Perfect alignment for the center footer logo */
+.footer-logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+
+
+.footer-img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 20px;       
+    display: inline-block;
+    border-radius: 50%;
+}
+footer a { 
+    text-decoration: none;
+    color: wheat;
+
+}
+/* 2. The Welcome Screen Curtain Layout */
+#welcomeCurtain {
+    position: fixed;        /* Locks the box over the ENTIRE screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f4f4; /* A sleek, deep dark black backdrop */
+    display: flex;             /* Activates flexbox to center the text box */
+    justify-content: center;   /* Centers text horizontally */
+    align-items: center;       /* Centers text vertically */
+    z-index: 9999;             /* Forces this box to sit on top of everything else */
+    transition: transform 1s ease-in-out; /* Handles the smooth slide-up effect later! */
+    height: 100vh;
+
+}
+
+/* 3. The Glowing Text Animation Rules */
+.glow-text {
+    color: #cf5007;            /* Matching your beautiful brick-orange color theme */
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 20px #cf5007; /* Gives the text a premium glowing aura effect! */
+    animation: textFade 1.5s ease-out forwards;
+}
+
+/* 4. Timeline for the glowing text entrance */
+@keyframes textFade {
+    0% { opacity: 0; transform: scale(0.8); } /* Starts small and hidden */
+    100% { opacity: 1; transform: scale(1); } /* Fades in perfectly straight */
+}
+
+
+/* Background blur curtain that sits over the main layout */
+.form-overlay {
+    display: none;        /* 🌟 Keeps it hidden when a user first lands on the page! */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent dark shading */
+    z-index: 10000;       /* Forces it to hover over your scrolling galleries */
+    
+
+}
+
+.form-content {
+    
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: left;
+}
+
+#closeFormBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+}
+
+body { scroll-behavior: smooth;}
+/* 📱 MOBILE RESPONSIVE RESPONSIVENESS PACKAGE */
+@media (max-width: 768px) {
+    
+    /* 1. Stack the Header Logo and Navigation Links vertically */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    
+    nav {
+        margin-top: 15px;
+    }
+    
+    nav a {
+        margin: 0 10px; /* Even spacing around mobile menu links */
+        font-size: 14px;
+    }
+
+    /* 2. Shrink the massive hero text so it fits phone displays */
+    .hero-banner h1 {
+        font-size: 28px;
+    }
+
+    /* 3. Stack the 3 Floating Statistics Cards vertically */
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adds clean vertical spacing gaps between cards */
+    }
+
+    .stat-card {
+        width: 80%; /* Makes the cards expand beautifully on mobile frames */
+    }
+    .programs-card {
+        width: 280px;
+    }
+    .programs-row {
+        flex-direction: column;
+    }
+    .card-gallery {
+        width: 320px;
+    }
+    .welcomeCurtain {
+        width: 100vw;  /* Viewport width */
+        height: 100vh; /* Viewport height - locks it perfectly on mobile! */
+    }
+    .hero-left-logo{
+        display: none !important;
+    }
+
+        /* 1. Force the side-by-side tile content boxes to stack in a clean vertical column */
+    .tile-content {
+        flex-direction: column !important; /* Changes from a row to a single column stack */
+        text-align: center !important;     /* Centers all text nicely for thumb scrolling */
+        padding: 25px 20px !important;    /* Tightens mobile internal padding gaps */
+    }
+
+    /* 2. Expand the left title box to occupy full mobile width */
+    .tile-left {
+        width: 100% !important;
+        margin-bottom: 15px !important;    /* Adds a clean layout gap above the paragraph description */
+    }
+
+    .tile-left h2 {
+        font-size: 24px !important;        /* Downsizes the heading text slightly to fit phone screens cleanly */
+    }
+
+    /* 3. Expand the right description paragraph box to full mobile width */
+    .tile-right {
+        width: 100% !important;
+    }
+
+    .tile-right p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+        /* Fix the preloader curtain typography clipping on narrow mobile viewports */
+    .glow-text {
+        font-size: 32px !important;        /* Scales the heading down so it fits a 320px width completely */
+        text-align: center !important;     /* Keeps it perfectly centered on the screen display */
+        letter-spacing: 0px !important;    /* Tightens up the lettering boundaries cleanly */
+    }
+
+
+}
+
+/* 1. Format the main form heading title */
+.form-content h3 {
+    margin-top: 0;              /* Removes default top gaps */
+    color: #cf5007;             /* Matching your beautiful brick-orange theme */
+    font-size: 24px;
+    margin-bottom: 20px;        /* Spacing below the title line */
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Format the input text labels (Name, DOB, etc.) */
+.form-content label {
+    display: block;             /* Forces each label onto its own line */
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 5px;         /* Sits close to its input box below it */
+    margin-top: 15px;           /* Adds a clean gap above the label */
+}
+/* 3. Style all text boxes inside the form container */
+.form-content input[type="text"], .form-content input[type="tel"] {
+    width: 100%;                /* Stretches the box to perfectly fill the card width */
+    padding: 10px 12px;         /* Adds comfortable internal typing room */
+    box-sizing: border-box;     /* Keeps width calculated perfectly with padding */
+    border: 1px solid #cccccc;  /* Soft gray border outline */
+    border-radius: 6px;         /* Smooth modern rounded corner edge */
+    font-size: 15px;
+    background-color: #fafafa;  /* Clean off-white inner background */
+    transition: all 0.3s ease;  /* Smoothly animates colors when clicked! */
+}
+
+/* 4. Highlight the input box outline when a user clicks into it */
+.form-content input:focus {
+    outline: none;              /* Turns off the default thick blue browser ring */
+    border: 1px solid #cf5007;  /* Snaps the border to your signature brick-orange! */
+    background-color: #ffffff;  /* Brightens the inner card background slightly */
+    box-shadow: 0px 0px 5px rgba(207, 80, 7, 0.2); /* Soft matching orange aura glow */
+}
+
+/* 5. Style the submit action button */
+.submit-form-btn {
+    width: 100%;                /* Stretches the button to span the full card width */
+    background-color: #cf5007;  /* Solid signature orange backdrop */
+    color: #ffffff;             /* Crisp white text color */
+    border: none;
+    padding: 12px;              /* Comfortable clicking thickness padding */
+    border-radius: 6px;         /* Smoothly rounded button corners */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;            /* Turns arrow cursor into a pointing hand */
+    margin-top: 20px;           /* Pushes it safely down away from the last input box */
+    transition: background-color 0.2s ease;
+}
+.submit-form-btn:hover {
+    background-color: #b34304;
+}
+.teacher-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.close-teacher-btn:hover{
+    background-color: #b34304;
+}
+/* 1. Main Hero Canvas Background Setup */
+.hero-banner {
+    background-color: #faf6f0 !important;  /* Solid premium cream backdrop just like the site */
+    display: flex !important;              /* Activates the horizontal row layout */
+    align-items: center !important;        /* Aligns elements perfectly inline vertically */
+    justify-content: space-between !important;
+    padding: 80px 10% 120px 10% !important; /* Leaves extra blank breathing space at bottom for the overlap */
+    overflow: hidden !important;           /* Cleanly clips the giant logo if it spills off-screen */
+    position: relative !important;
+}
+
+/* 2. Positioning the Giant Logo on the Far Left */
+.hero-left-logo {
+    width: 45% ;                 /* Takes up the left half of the display */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.hero-left-logo img {
+    width: 380px;               /* Makes the logo image massive */
+    height: auto;
+    opacity: 0.85;              /* Gives it a slightly soft look */
+    margin-left: -60px;         /* Pulls it slightly off-screen to create that cropped look */
+    border-radius: 50%;
+}
+
+/* 3. Formatting the Text Header on the Right */
+.hero-right-text {
+    width: 50% !important;                 /* Takes up the right half of the display */
+    text-align: left !important;
+}
+
+.hero-right-text h1 {
+    font-family: Impact, sans-serif;
+    font-size: 52px;            /* Giant headline size */
+    color: #cf5007;             /* Your beautiful signature brick orange */
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #555555;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+/* 4. Designing the Overlapping Floating Tile Container */
+.floating-tile-section {
+    width: 100% !important;
+    margin-top: -60px !important;          /* 🌟 MAGIC LINE: Negative margin pulls this whole block UP to overlap the cream banner! */
+    position: relative !important;
+    z-index: 10 !important;                /* Forces the tile block to float cleanly over the logo/banner */
+    padding: 0 10% !important;
+    box-sizing: border-box !important;
+}
+
+/* The solid brick-orange box card layout wrapper */
+.tile-content {
+    background-color: #cf5007;  /* Solid brick-orange block theme matches your look */
+    color: #ffffff;             /* Crisp white text color */
+    display: flex;              /* Splitting the block inside into left and right columns */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;              /* Internal breathing space padding cushion */
+    border-radius: 8px;         /* Smoothly curved tile block corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Deep rich floating box shadow */
+}
+
+.tile-left {
+    width: 35%;
+}
+.tile-left h2 {
+    font-size: 30px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+.tile-right {
+    width: 60%;
+}
+
+.tile-right p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+}
+.hero-btn {
+    background-color: #b34304;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+}
